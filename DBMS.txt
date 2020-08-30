@@ -1,0 +1,133 @@
+What is Database ?
+    - A database is an organized collection of inter-related data, so that it can be easily accessed and managed.
+    - You can organize data into tables, rows, columns, and index it to make it easier to find relevant information.
+    - The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
+
+Database Management System
+    -Database management system is a software which is used to manage the database. For example: MySQL, Oracle, etc are a very popular commercial database which is used in different applications.
+    -DBMS provides an interface to perform various operations like database creation, storing data in it, updating data, creating a table in the database and a lot more.
+    -It provides protection and security to the database. In the case of multiple users, it also maintains data consistency.
+
+____________________
+RDBMS
+    - RDBMS stands for Relational Database Management Systems..
+    - All modern database management systems like SQL, MS SQL Server, IBM DB2, ORACLE, My-SQL and Microsoft Access are based on RDBMS.
+    - It is called Relational Data Base Management System (RDBMS) because it is based on relational model introduced by E.F. Codd.
+    - Relational database is most commonly used database. It contains number of tables and each table has its own primary key.
+
+What is table ?
+    The RDBMS database uses tables to store data. A table is a collection of related data entries and contains rows and columns to store data.
+
+What is field ?
+    Field is a smaller entity of the table which contains specific information about every record in the table. In the above example, the field in the student table consist of id, name, age, course.
+
+Data Integrity
+    There are the following categories of data integrity exist with each RDBMS:
+        - Entity integrity: It specifies that there should be no duplicate rows in a table.
+        - Domain integrity: It enforces valid entries for a given column by restricting the type, the format, or the range of values.
+        - Referential integrity: It specifies that rows cannot be deleted, which are used by other records.
+        - User-defined integrity: It enforces some specific business rules that are defined by users. These rules are different from entity, domain or referential integrity.
+
+DBMS vs RDMS
+    DBMS
+        - DBMS applications store data as file.
+        - In DBMS, data is generally stored in either a hierarchical form or a navigational form.
+        - Normalization is not present in DBMS.
+        - DBMS does not apply any security with regards to data manipulation.
+    RDBMS
+        - RDBMS applications store data in a tabular form.
+        - In RDBMS, the tables have an identifier called primary key and the data values are stored in the form of tables.
+        - Normalization is present in RDBMS.
+        - RDBMS defines the integrity constraint for the purpose of ACID (Atomocity, Consistency, Isolation and Durability) property.
+
+____________________
+DBMS Three schema Architecture
+    - This framework is used to describe the structure of a specific database system.
+    - The three schema architecture is also used to separate the user applications and physical database.
+    - The three schema architecture contains three-levels. It breaks the database down into three different categories.
+        - Internal schema
+            - describes the physical storage structure of the database.
+            - It is used to define that how the data will be stored in a block.
+        - Conceptual schema
+            - The conceptual schema describes the structure of the whole database.
+            - The conceptual level describes what data are to be stored in the database and also describes what relationship exists among those data.
+            - Programmers and database administrators work at this level.
+        - External schema
+            - At the external level, a database contains several schemas that sometimes called as subschema. The subschema is used to describe the different view of the database.
+            - Each view schema describes the database part that a particular user group is interested and hides the remaining database from that user group.
+            - describes the end user interaction with database systems.
+
+____________________
+Data Models
+    Data Model is the modeling of the data description, data semantics, and consistency constraints of the data. It provides the conceptual tools for describing the design of a database at each level of data abstraction. There are four data models :
+        - Relational Data Model: This type of model designs the data in the form of rows and columns within a table. Thus, a relational model uses tables for representing data and in-between relationships. Tables are also called relations. The relational data model is the widely used model which is primarily used by commercial data processing applications.
+        - Entity-Relationship Data Model: An ER model is the logical representation of data as objects and relationships among them. These objects are known as entities, and relationship is an association among these entities. It was widely used in database designing.
+        - Object-based Data Model: An extension of the ER model with notions of functions, encapsulation, and object identity, as well. This model supports a rich type system that includes structured and collection types.
+        - Semistructured Data Model: This type of data model is different from the other three data models. The semistructured data model allows the data specifications at places where the individual data items of the same type may have different attributes sets. The Extensible Markup Language, also known as XML, is widely used for representing the semistructured data.
+
+Data model Schema and Instance
+    - The data which is stored in the database at a particular moment of time is called an instance of the database.
+    - The overall design of a database is called schema.
+    - A database schema is the skeleton structure of the database. It represents the logical view of the entire database.
+    - A schema contains schema objects like table, foreign key, primary key, views, columns, data types, stored procedure, etc.
+
+Data Independence
+    - Data independence refers characteristic of being able to modify the schema at one level of the database system without altering the schema at the next higher level.
+    - There are two types of data independence:
+        - Logical Data Independence
+            - Logical data independence refers characteristic of being able to change the conceptual schema without having to change the external schema.
+            - Logical data independence is used to separate the external level from the conceptual view.
+            - If we do any changes in the conceptual view of the data, then the user view of the data would not be affected.
+            - Logical data independence occurs at the user interface level.
+        - Physical Data Independence
+            - Physical data independence can be defined as the capacity to change the internal schema without having to change the conceptual schema.
+            - If we do any changes in the storage size of the database system server, then the Conceptual structure of the database will not be affected.
+            - Physical data independence is used to separate conceptual levels from the internal levels.
+            - Physical data independence occurs at the logical interface level.
+
+____________________
+Database Language
+    - A DBMS has appropriate languages and interfaces to express database queries and updates.
+    - Database languages can be used to read, store and update the data in the database.
+
+Types of Database Language
+    - Data Definition Language (DDL) e.g., CREATE, ALTER, DROP, TRUNCATE, RENAME, etc. All these commands are used for updating the data that?s why they are known as Data Definition Language.
+    - Data Manipulation Language (DML) e.g., SELECT, UPDATE, INSERT, DELETE, etc. These commands are used for the manipulation of already updated data that's why they are the part of Data Manipulation Language.
+    - DATA Control Language (DCL) e.g., GRANT and REVOKE. These commands are used for giving and removing the user access on the database. So, they are the part of Data Control Language.
+    - Transaction Control Language (TCL) e.g., COMMIT, ROLLBACK, and SAVEPOINT. These are the commands used for managing transactions in the database. TCL is used for managing the changes made by DML.
+
+____________________
+ER Model
+    - ER model stands for an Entity-Relationship model. It is a high-level data model. This model is used to define the data elements and relationship for a specified system.
+    - It develops a conceptual design for the database. It also develops a very simple and easy to design view of data.
+
+Entity
+    An entity may be any object, class, person or place. In the ER diagram, an entity can be represented as rectangles.
+
+Weak Entity
+    An entity that depends on another entity called a weak entity. The weak entity doesn't contain any key attribute of its own. The weak entity is represented by a double rectangle.
+
+Attribute
+    The attribute is used to describe the property of an entity. Eclipse is used to represent an attribute.
+
+Key Attribute
+    The key attribute is used to represent the main characteristics of an entity. It represents a primary key. The key attribute is represented by an ellipse with the text underlined.
+
+Derived Attribute
+    An attribute that can be derived from other attribute is known as a derived attribute. It can be represented by a dashed ellipse.
+
+Relationship
+    - A relationship is used to describe the relation between entities. Diamond or rhombus is used to represent the relationship.
+
+____________________
+Keys
+    - Keys play an important role in the relational database.
+    - It is used to uniquely identify any record or row of data from the table. It is also used to establish and identify relationships between tables.
+
+
+
+____________________
+____________________
+____________________
+____________________
+____________________

@@ -1,0 +1,135 @@
+What is OOP ?
+    The programming paradigm where everything is represented as an object is known as object-oriented programming language.Object-Oriented Programming is a methodology to design a program using classes and objects. It simplifies the software development and maintenance by providing some concepts:
+        - Object
+        - Class
+        - Inheritance
+        - Polymorphism
+        - Abstraction
+        - Encapsulation
+
+_______________________________________
+Advantage of OOP
+- Modularity for easier troubleshooting
+    When working with object-oriented programming languages, you know exactly where to look if something broke.Objects are self-contained, and each bit of functionality does its own thing while leaving the other bits alone. This allow debugging the code easier.
+- Reuse of code through inheritance
+    If multiple classes share some common functionality, Then we can define a parent class define those common functionaly in parent class and lets other class inherit those functionality from parent, instead of refining it again and again for each class
+- Flexibility through polymorphism
+    In OOP a single function can shape-shift(polymorph) to adapt to whichever class it’s in, you could create one function in the parent class and then redefine it in child class if diff functionality is required
+- Effective problem solving
+    OOP languages allows you to break down your software into bite-sized problems that you then can solve — one object at a time.
+
+_______________________________________
+Object
+    - object is an entity that has state and behavior.
+    - Object is a runtime entity, it is created at runtime.
+    - Object is an instance of a class. All the members of the class can be accessed through object.
+
+Class
+    Class is an collection of similar data and methods
+
+_______________________________________
+Constructor
+    - constructor is a special method which is invoked automatically at the time of object creation. It is used to initialize the data members of new object generally. The constructor in C++ has the same name as class or structure.
+    - Constructor can have parameters too.
+    there are two type of constructure
+        - default constructor - A constructor which has no argument is known as default constructor. It is invoked at the time of creating object.
+        - parameterized constructor - A constructor which has parameters is called parameterized constructor. It is used to provide different values to distinct objects.
+
+Copy Constructor
+    A Copy constructor is an overloaded constructor used to declare and initialize an object from another object.
+
+_______________________________________
+Destructor
+    - A destructor works opposite to constructor; it destructs the objects of classes. It can be defined only once in a class. Like constructors, it is invoked automatically.
+    - A destructor is defined like constructor. It must have same name as class. But it is prefixed with a tilde sign (~).
+
+_______________________________________
+this Pointer
+    this is a keyword that refers to the current instance of the class. There can be 3 main usage of this keyword.
+        -It can be used to pass current object as a parameter to another method.
+        -It can be used to refer current class instance variable.
+        -It can be used to declare indexers.
+
+_______________________________________
+Static Members
+    - We can define class members static using static keyword. When we declare a member of a class as static it means no matter how many objects of the class are created, there is only one copy of the static member.
+    - A static member is shared by all objects of the class. All static data is initialized to zero when the first object is created, if no other initialization is present.
+
+Static Function Members
+    - By declaring a function member as static, you make it independent of any particular object of the class. A static member function can be called even if no objects of the class exist and the static functions are accessed using only the class name and the scope resolution operator ::.
+    - A static member function can only access static data member, other static member functions and any other functions from outside the class.
+    - Static member functions have a class scope and they do not have access to the this pointer of the class. You could use a static member function to determine whether some objects of the class have been created or not.
+
+_______________________________________
+Friend function
+    If a function is defined as a friend function in C++, then the protected and private data of a class can be accessed using the function.
+    Characteristics of a Friend function:
+        -The function is not in the scope of the class to which it has been declared as a friend.
+        -It cannot be called using the object as it is not in the scope of that class.
+        -It can be invoked like a normal function without using the object.
+        -It cannot access the member names directly and has to use an object name and dot membership operator with the member name.
+        -It can be declared either in the private or the public part.
+
+_______________________________________
+Encapsulation:
+    - Encapsulation is a mechanism of wrapping the data (instance variables) and code acting on the data (methods) together as a single unit like a Class.
+    The main purpose of encapsulation is you would have full control on data by using the code.
+    - In encapsulation, the variables of a class can be made hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as data hiding.
+    - Encapsulation can be described as a protective barrier that prevents the code and data being randomly accessed by other code defined outside the class. Access to the data and code is tightly controlled by a class.
+
+_______________________________________
+Abstraction:
+    - Abstraction is a process of hiding the implementation details from the user, only the functionality will be provided to the user.
+    - In other words, the user will have the information on what the object does instead of how it does it.
+    - By hiding complex steps/details/computations/statements inside your classes and creating public methods to access them. Ex: Wrapper Classes
+    - Abstract classes are the way to achieve abstraction in C++. Abstraction in C++ is the process to hide the internal details and showing functionality only.
+
+_______________________________________
+Inheritance:
+    Inheritance can be defined as the process where one class acquires the properties (data, methods and fields) of parent class.
+    Advantages of inheritance are as follows:
+        -Inheritance promotes reusability. When a class inherits or derives another class, it can access all the functionality of inherited class.
+        -Reusability enhanced reliability. The base class code will be already tested and debugged.
+        -As the existing code is reused, it leads to less development and maintenance costs.
+        -Inheritance makes the sub classes follow a standard interface.
+        -Inheritance helps to reduce code redundancy and supports code extensibility.
+        -Inheritance facilitates creation of class libraries.
+    eg - 
+        class derived_class_name :: visibility-mode base_class_name  
+        {  
+            // body of the derived class.  
+        }
+
+_______________________________________
+Polymorphism:
+    In object-oriented programming, polymorphism (from the Greek meaning “having multiple forms”) is the characteristic of being able to assign a different meaning or usage to something in different contexts — specifically, to allow an entity such as a function, or an object to have more than one form.
+    There are two types of polymorphism - 
+        - Compile time polymorphism: The overloaded functions are invoked by matching the type and number of arguments. This information is available at the compile time and, therefore, compiler selects the appropriate function at the compile time. It is achieved by function overloading and operator overloading which is also known as static binding or early binding. 
+        - Run time polymorphism: Run time polymorphism is achieved when the object's method is invoked at the run time instead of compile time. It is achieved by method overriding which is also known as dynamic binding or late binding.
+
+overloading
+    If we create two or more members having the same name but different in number or type of parameter, it is known as overloading. In C++, we can overload:
+        -methods
+        -constructors
+        -indexed properties
+    Function overloading
+        - Function Overloading is defined as the process of having two or more function with the same name, but different in parameters is known as function overloading in C++. In function overloading, the function is redefined by using either different types of arguments or a different number of arguments. It is only through these differences compiler can differentiate between the functions.
+        - The advantage of Function overloading is that it increases the readability of the program because you don't need to use different names for the same action.
+    Operators Overloading
+        - Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type. For example, C++ provides the ability to add the variables of the user-defined data type that is applied to the built-in data types.
+
+Overriding
+    If derived class defines same function as defined in its base class, it is known as function overriding. It is used to achieve runtime polymorphism. It enables you to provide specific implementation of the function which is already provided by its base class.
+
+virtual function
+    - A C++ virtual function is a member function in the base class that you redefine in a derived class. It is declared using the virtual keyword.
+    - It is used to tell the compiler to perform dynamic linkage or late binding on the function.
+    - There is a necessity to use the single pointer to refer to all the objects of the different classes. So, we create the pointer to the base class that refers to all the derived objects. But, when base class pointer contains the address of the derived class object, always executes the base class function. This issue can only be resolved by using the 'virtual' function.
+    - When the function is made virtual, C++ determines which function is to be invoked at the runtime based on the type of the object pointed by the base class pointer.
+
+_______________________________________
+Early Binding
+    This is compile time polymorphism. Here it directly associates an address to the function call. For function overloading it is an example of early binding.
+
+Late Binding
+    This is run time polymorphism. In this type of binding the compiler adds code that identifies the object type at runtime then matches the call with the right function definition. This is achieved by using virtual function.
