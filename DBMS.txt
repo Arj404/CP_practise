@@ -8,7 +8,7 @@ Database Management System
     -DBMS provides an interface to perform various operations like database creation, storing data in it, updating data, creating a table in the database and a lot more.
     -It provides protection and security to the database. In the case of multiple users, it also maintains data consistency.
 
-____________________
+____________________________________________________________
 RDBMS
     - RDBMS stands for Relational Database Management Systems..
     - All modern database management systems like SQL, MS SQL Server, IBM DB2, ORACLE, My-SQL and Microsoft Access are based on RDBMS.
@@ -40,7 +40,7 @@ DBMS vs RDMS
         - Normalization is present in RDBMS.
         - RDBMS defines the integrity constraint for the purpose of ACID (Atomocity, Consistency, Isolation and Durability) property.
 
-____________________
+____________________________________________________________
 DBMS Three schema Architecture
     - This framework is used to describe the structure of a specific database system.
     - The three schema architecture is also used to separate the user applications and physical database.
@@ -57,7 +57,7 @@ DBMS Three schema Architecture
             - Each view schema describes the database part that a particular user group is interested and hides the remaining database from that user group.
             - describes the end user interaction with database systems.
 
-____________________
+____________________________________________________________
 Data Models
     Data Model is the modeling of the data description, data semantics, and consistency constraints of the data. It provides the conceptual tools for describing the design of a database at each level of data abstraction. There are four data models :
         - Relational Data Model: This type of model designs the data in the form of rows and columns within a table. Thus, a relational model uses tables for representing data and in-between relationships. Tables are also called relations. The relational data model is the widely used model which is primarily used by commercial data processing applications.
@@ -85,7 +85,7 @@ Data Independence
             - Physical data independence is used to separate conceptual levels from the internal levels.
             - Physical data independence occurs at the logical interface level.
 
-____________________
+____________________________________________________________
 Database Language
     - A DBMS has appropriate languages and interfaces to express database queries and updates.
     - Database languages can be used to read, store and update the data in the database.
@@ -96,7 +96,7 @@ Types of Database Language
     - DATA Control Language (DCL) e.g., GRANT and REVOKE. These commands are used for giving and removing the user access on the database. So, they are the part of Data Control Language.
     - Transaction Control Language (TCL) e.g., COMMIT, ROLLBACK, and SAVEPOINT. These are the commands used for managing transactions in the database. TCL is used for managing the changes made by DML.
 
-____________________
+____________________________________________________________
 ER Model
     - ER model stands for an Entity-Relationship model. It is a high-level data model. This model is used to define the data elements and relationship for a specified system.
     - It develops a conceptual design for the database. It also develops a very simple and easy to design view of data.
@@ -119,15 +119,45 @@ Derived Attribute
 Relationship
     - A relationship is used to describe the relation between entities. Diamond or rhombus is used to represent the relationship.
 
-____________________
+____________________________________________________________
 Keys
     - Keys play an important role in the relational database.
     - It is used to uniquely identify any record or row of data from the table. It is also used to establish and identify relationships between tables.
 
+Primary key
+    - A primary key is a field in a table which uniquely identifies each row/record in a database table. 
+    - Primary keys must contain unique values. 
+    - A primary key column cannot have NULL values.
+    - A table can have only one primary key, which may consist of single or multiple fields. 
+    - For each entity, selection of the primary key is based on requirement and developers.
 
+Candidate key
+    - A candidate key is an attribute or set of an attribute which can uniquely identify a row/record.
+    - The remaining attributes except for primary key are considered as a candidate key. The candidate keys are as strong as the primary key.
 
-____________________
-____________________
-____________________
-____________________
-____________________
+Super Key
+    - Super key is a set of an attribute which can uniquely identify a row/record. Super key is a superset of a candidate key.
+
+Foreign key
+    - Foreign keys are the column of the table which is used to point to the primary key of another table.
+
+____________________________________________________________
+Generalization
+    - Generalization is like a bottom-up approach in which two or more entities of lower level combine to form a higher level entity if they have some attributes in common.
+    - In generalization, an entity of a higher level can also combine with the entities of the lower level to form a further higher level entity.
+    - In generalization, entities are combined to form a more generalized entity, i.e., subclasses are combined to make a superclass.
+
+Specialization
+    - Specialization is a top-down approach, and it is opposite to Generalization. In specialization, one higher level entity can be broken down into two lower level entities.
+    - Specialization is used to identify the subset of an entity set that shares some distinguishing characteristics.
+    - Normally, the superclass is defined first, the subclass and its related attributes are defined next, and relationship set are then added.
+
+Aggregation
+    - In aggregation, the relation between two entities is treated as a single entity. In aggregation, relationship with its corresponding entities is aggregated into a higher level entity.
+
+____________________________________________________________
+Indexing in DBMS
+    - Indexing is used to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed.
+    - The index is a type of data structure. It is used to locate and access the data in a database table quickly.
+
+## Data in Dbms is saved in B+ Trees

@@ -1,0 +1,79 @@
+SQL
+    - SQL stands for Structured Query Language. It is used for storing and managing data in relational database management system (RDMS).
+    - It is a standard language for Relational Database System. It enables a user to create, read, update and delete relational databases and tables.
+    - SQL allows users to query the database in a number of ways, using English-like statements.
+
+____________________________________________________________
+SQL Datatype
+    - int
+    - float
+    - decimal
+    - char
+    - text
+    - varchar(20)
+    - char
+    - date
+    - time
+    - timestamp
+
+____________________________________________________________
+Types of SQL Commands
+    - There are five types of SQL commands: DDL, DML, DCL, TCL, and DQL.
+
+Data Definition Language (DDL)
+    - DDL changes the structure of the table like creating a table, deleting a table, altering a table, etc.
+    - All the command of DDL are auto-committed that means it permanently save all the changes in the database.
+    - Here are some commands that come under DDL:
+        - CREATE :- CREATE TABLE TABLE_NAME (COLUMN_NAME DATATYPES[,....], ...);
+        - ALTER :- ALTER TABLE table_name ADD column_name COLUMN-definition;
+        - DROP :- DROP TABLE TABLE_NAME;
+        - TRUNCATE (it is used to delete all the rows from the table and free the space containing the table)
+            :- TRUNCATE TABLE table_name; 
+
+Data Manipulation Language
+    - DML commands are used to modify the database. It is responsible for all form of changes in the database.
+    - The command of DML is not auto-committed that means it can't permanently save all the changes in the database. They can be rollback.
+    - Here are some commands that come under DML:
+        - INSERT :- INSERT INTO TABLE_NAME  VALUES (value1, value2, .. valueN);  
+        - UPDATE :- UPDATE table_name SET [column_name1= value1,...column_nameN = valueN] [WHERE CONDITION];
+        - DELETE :- DELETE FROM table_name [WHERE condition];
+
+Data Control Language
+    - DCL commands are used to grant and take back authority from any database user.
+    - Here are some commands that come under DCL:
+        - Grant (It is used to give user access privileges to a database.) 
+            :- GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;
+        - Revoke (It is used to take back permissions from the user.)
+            :- REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2; 
+
+Transaction Control Language
+    - TCL commands can only use with DML commands like INSERT, DELETE and UPDATE only.
+    - These operations are automatically committed in the database that's why they cannot be used while creating tables or dropping them.
+    - Here are some commands that come under TCL:
+        - COMMIT (Commit command is used to save all the transactions to the database.)
+            :- COMMIT;
+        - ROLLBACK (Rollback command is used to undo transactions that have not already been saved to the database.)
+            :- ROLLBACK;
+        - SAVEPOINT (It is used to roll the transaction back to a certain point without rolling back the entire transaction.)
+            :- SAVEPOINT SAVEPOINT_NAME;
+
+Data Query Language
+    - DQL is used to fetch the data from the database.
+    - It uses only one command:
+            - SELECT :- SELECT expressions  FROM TABLES  WHERE conditions;  
+
+____________________________________________________________
+Views in SQL
+    - Views in SQL are considered as a virtual table. A view also contains rows and columns.
+    - To create the view, we can select the fields from one or more tables present in the database.
+    - A view can either have specific rows based on certain condition or all the rows of a table.
+
+SQL Index
+    - Indexes are special lookup tables. It is used to retrieve data from the database very fast.
+    - An Index is used to speed up select queries and where clauses. But it shows down the data input with insert and update statements. Indexes can be created or dropped without affecting the data.
+    - An index in a database is just like an index in the back of a book.
+
+SQL Aggregate Functions
+    - SQL aggregation function is used to perform the calculations on multiple rows of a single column of a table. It returns a single value.
+    - It is also used to summarize the data.
+    - eg - SUM(), COUNT(), AVG(), ...
