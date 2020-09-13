@@ -1,0 +1,11 @@
+DROP USER IF EXISTS 'arjavjain'@'localhost';
+CREATE USER 'arjavjain'@'localhost' IDENTIFIED BY 'alohomora';
+GRANT ALL PRIVILEGES ON database_name.* TO 'arjavjain'@'localhost';
+SET PASSWORD FOR 'arjavjain' = 'alohomora';
+FLUSH PRIVILEGES;
+
+mysqladmin -u root flush-privileges password 'alohomora'
+
+UPDATE user set authentication_string = 'alohomora' where user = 'arjavjain' and host = 'localhost';
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'alohomora';

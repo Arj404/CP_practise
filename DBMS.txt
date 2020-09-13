@@ -1,18 +1,15 @@
 What is Database ?
-    - A database is an organized collection of inter-related data, so that it can be easily accessed and managed.
-    - You can organize data into tables, rows, columns, and index it to make it easier to find relevant information.
-    - The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
+    - A database is an organized collection of data, so that it can be easily accessed and managed.
 
 Database Management System
-    -Database management system is a software which is used to manage the database. For example: MySQL, Oracle, etc are a very popular commercial database which is used in different applications.
-    -DBMS provides an interface to perform various operations like database creation, storing data in it, updating data, creating a table in the database and a lot more.
-    -It provides protection and security to the database. In the case of multiple users, it also maintains data consistency.
+    - Database management system is a software which is used to manage the database.
+    - DBMS provides an interface to perform various operations like database creation, storing data in it, updating data, creating a table in the database and a lot more.
+    - It provides protection and security to the database.
+    - In the case of multiple users, it also maintains data consistency.
 
 ____________________________________________________________
 RDBMS
-    - RDBMS stands for Relational Database Management Systems..
-    - All modern database management systems like SQL, MS SQL Server, IBM DB2, ORACLE, My-SQL and Microsoft Access are based on RDBMS.
-    - It is called Relational Data Base Management System (RDBMS) because it is based on relational model introduced by E.F. Codd.
+    - RDBMS stands for Relational Database Management Systems.
     - Relational database is most commonly used database. It contains number of tables and each table has its own primary key.
 
 What is table ?
@@ -28,16 +25,14 @@ Data Integrity
         - Referential integrity: It specifies that rows cannot be deleted, which are used by other records.
         - User-defined integrity: It enforces some specific business rules that are defined by users. These rules are different from entity, domain or referential integrity.
 
-DBMS vs RDMS
+DBMS vs RDBMS
     DBMS
         - DBMS applications store data as file.
-        - In DBMS, data is generally stored in either a hierarchical form or a navigational form.
-        - Normalization is not present in DBMS.
+        - In DBMS, data is generally stored in a hierarchical form.
         - DBMS does not apply any security with regards to data manipulation.
     RDBMS
         - RDBMS applications store data in a tabular form.
         - In RDBMS, the tables have an identifier called primary key and the data values are stored in the form of tables.
-        - Normalization is present in RDBMS.
         - RDBMS defines the integrity constraint for the purpose of ACID (Atomocity, Consistency, Isolation and Durability) property.
 
 ____________________________________________________________
@@ -86,20 +81,10 @@ Data Independence
             - Physical data independence occurs at the logical interface level.
 
 ____________________________________________________________
-Database Language
-    - A DBMS has appropriate languages and interfaces to express database queries and updates.
-    - Database languages can be used to read, store and update the data in the database.
-
-Types of Database Language
-    - Data Definition Language (DDL) e.g., CREATE, ALTER, DROP, TRUNCATE, RENAME, etc. All these commands are used for updating the data that?s why they are known as Data Definition Language.
-    - Data Manipulation Language (DML) e.g., SELECT, UPDATE, INSERT, DELETE, etc. These commands are used for the manipulation of already updated data that's why they are the part of Data Manipulation Language.
-    - DATA Control Language (DCL) e.g., GRANT and REVOKE. These commands are used for giving and removing the user access on the database. So, they are the part of Data Control Language.
-    - Transaction Control Language (TCL) e.g., COMMIT, ROLLBACK, and SAVEPOINT. These are the commands used for managing transactions in the database. TCL is used for managing the changes made by DML.
-
-____________________________________________________________
 ER Model
-    - ER model stands for an Entity-Relationship model. It is a high-level data model. This model is used to define the data elements and relationship for a specified system.
-    - It develops a conceptual design for the database. It also develops a very simple and easy to design view of data.
+    - ER model stands for an Entity-Relationship model.
+    - An ER model is the logical representation of data as objects and relationships among them.
+    - It develops a conceptual design for the database.
 
 Entity
     An entity may be any object, class, person or place. In the ER diagram, an entity can be represented as rectangles.
@@ -121,8 +106,7 @@ Relationship
 
 ____________________________________________________________
 Keys
-    - Keys play an important role in the relational database.
-    - It is used to uniquely identify any record or row of data from the table. It is also used to establish and identify relationships between tables.
+    - It is used to uniquely identify any record from the table. It is also used to establish and identify relationships between tables.
 
 Primary key
     - A primary key is a field in a table which uniquely identifies each row/record in a database table. 
@@ -145,15 +129,13 @@ ____________________________________________________________
 Generalization
     - Generalization is like a bottom-up approach in which two or more entities of lower level combine to form a higher level entity if they have some attributes in common.
     - In generalization, an entity of a higher level can also combine with the entities of the lower level to form a further higher level entity.
-    - In generalization, entities are combined to form a more generalized entity, i.e., subclasses are combined to make a superclass.
 
 Specialization
     - Specialization is a top-down approach, and it is opposite to Generalization. In specialization, one higher level entity can be broken down into two lower level entities.
     - Specialization is used to identify the subset of an entity set that shares some distinguishing characteristics.
-    - Normally, the superclass is defined first, the subclass and its related attributes are defined next, and relationship set are then added.
 
 Aggregation
-    - In aggregation, the relation between two entities is treated as a single entity. In aggregation, relationship with its corresponding entities is aggregated into a higher level entity.
+    - In aggregation, the relation between two entities is treated as a single entity.
 
 ____________________________________________________________
 Indexing in DBMS

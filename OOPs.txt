@@ -53,7 +53,7 @@ this Pointer
 _______________________________________
 Static Members
     - We can define class members static using static keyword. When we declare a member of a class as static it means no matter how many objects of the class are created, there is only one copy of the static member.
-    - A static member is shared by all objects of the class. All static data is initialized to zero when the first object is created, if no other initialization is present.
+    - A static member is shared by all objects of the class.
 
 Static Function Members
     - By declaring a function member as static, you make it independent of any particular object of the class. A static member function can be called even if no objects of the class exist and the static functions are accessed using only the class name and the scope resolution operator ::.
@@ -62,7 +62,7 @@ Static Function Members
 
 _______________________________________
 Friend function
-    If a function is defined as a friend function in C++, then the protected and private data of a class can be accessed using the function.
+    If a function is defined as a friend function of a class, then the protected and private data of a class can be accessed using the function.
     Characteristics of a Friend function:
         -The function is not in the scope of the class to which it has been declared as a friend.
         -It cannot be called using the object as it is not in the scope of that class.
@@ -72,8 +72,7 @@ Friend function
 
 _______________________________________
 Encapsulation:
-    - Encapsulation is a mechanism of wrapping the data (instance variables) and code acting on the data (methods) together as a single unit like a Class.
-    The main purpose of encapsulation is you would have full control on data by using the code.
+    - Encapsulation is a mechanism of wrapping similar data and methods together as a single unit like a Class.
     - In encapsulation, the variables of a class can be made hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as data hiding.
     - Encapsulation can be described as a protective barrier that prevents the code and data being randomly accessed by other code defined outside the class. Access to the data and code is tightly controlled by a class.
 
@@ -102,7 +101,7 @@ Inheritance:
 
 _______________________________________
 Polymorphism:
-    In object-oriented programming, polymorphism (from the Greek meaning “having multiple forms”) is the characteristic of being able to assign a different meaning or usage to something in different contexts — specifically, to allow an entity such as a function, or an object to have more than one form.
+    polymorphism  meaning “having multiple forms” is the abality to allow an entity such as a function, or an object to have more than one form.
     There are two types of polymorphism - 
         - Compile time polymorphism: The overloaded functions are invoked by matching the type and number of arguments. This information is available at the compile time and, therefore, compiler selects the appropriate function at the compile time. It is achieved by function overloading and operator overloading which is also known as static binding or early binding. 
         - Run time polymorphism: Run time polymorphism is achieved when the object's method is invoked at the run time instead of compile time. It is achieved by method overriding which is also known as dynamic binding or late binding.
@@ -133,3 +132,65 @@ Early Binding
 
 Late Binding
     This is run time polymorphism. In this type of binding the compiler adds code that identifies the object type at runtime then matches the call with the right function definition. This is achieved by using virtual function.
+
+_______________________________________
+Void pointer
+    A void pointer is a general-purpose pointer that can hold the address of any data type, but it is not associated with any data type.
+
+Null pointer
+    A null pointer is a pointer which points nothing. When initialize a pointer variable when that pointer variable isn't assigned any valid memory address yet and is called null pointer.
+
+Dangling pointer
+    - Dangling pointers in computer programming are pointers that pointing to a memory location that has been deleted (or freed).
+    - Dangling pointers arise during object destruction, when an object that has an incoming reference is deleted or deallocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the deallocated memory.
+
+Namespaces
+    - Namespaces in C++ are used to organize too many classes so that it can be easy to handle the application.
+    - we cannot have classes , variable etc with the same name. So to avoid those conflicts we use namespaces.
+    - So for one namespace we can have one unique name and that same name can also be used in another namespace.
+
+Why we use using namespace std ?
+    “using namespace std” means we use the namespace named std. “std” is an abbreviation for standard. So that means we use all the things with in “std” namespace.
+
+_______________________________________
+Call by Reference
+    - An address of value is passed to the function
+    - Changes made inside the function is reflected outside the function also
+    - eg - swap(&x, &y);
+
+Call by Value
+    - A copy of value is passed to the function
+    - Changes made inside the function is not reflected on other functions
+    - eg - swap(x, y);
+
+_______________________________________
+Structure Padding in C++
+    - The processor does not read 1 byte at a time. It reads 1 word at a time.
+    - If we have a 32-bit processor, then the processor reads 4 bytes at a time, which means that 1 word is equal to 4 bytes.
+
+struct student  
+{  
+  char a; // 1 byte  
+  char b; // 1 byte  
+  int c; // 4 bytes   
+}  
+
+Its size should be 6byte but when we print sizeof(student) it come out to be 8byte bcs of structure padding.
+the total memory occupied by the structure is 8 bytes (1 byte + 1 byte + 2 bytes + 4 bytes) here 2byte space is empty
+
+
+C++ References
+    - There is another variable that C++ supports, i.e., references. It is a variable that behaves as an alias for another variable.
+    - Reference can be created by simply using an ampersand (&) operator.
+    - eg - int &ref=a;
+    - References can also be passed as a function parameter.
+    - eg - void swap(int &p, int &q) // function definition  
+            swap(a, b); // function calling  
+    - A reference variable can be considered as a constant pointer
+
+A malloc() is a function that allocates memory at the runtime.
+
+_______________________________________
+Exception Handling
+    - Exception Handling in C++ is a process to handle runtime errors. We perform exception handling so the normal flow of the application can be maintained even after runtime errors.
+    - Exception handling is performed using try/catch statement. The C++ try block is used to place the code that may occur exception. The catch block is used to handle the exception.

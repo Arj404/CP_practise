@@ -1,7 +1,6 @@
 SQL
     - SQL stands for Structured Query Language. It is used for storing and managing data in relational database management system (RDMS).
     - It is a standard language for Relational Database System. It enables a user to create, read, update and delete relational databases and tables.
-    - SQL allows users to query the database in a number of ways, using English-like statements.
 
 ____________________________________________________________
 SQL Datatype
