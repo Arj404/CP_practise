@@ -1,0 +1,7 @@
+%x - print value in hexadecimal
+
+In C, if one case is true switch block is executed until it finds break statement. If no break statement is present all cases are executed after the true case.
+
+\r in it so it goes back to start of the line and starts printing characters.
+
+When you declare a structure, you actually declare a new data type suitable for your purpose. So you cannot initialize values as it is not a variable declaration but a data type declaration.

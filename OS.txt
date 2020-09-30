@@ -1,0 +1,129 @@
+Operating System
+    - An Operating System can be defined as an interface between user and hardware. It is responsible for the execution of all the processes, Resource Allocation, CPU management, File Management and many other tasks.
+    - The purpose of an operating system is to provide an environment in which a user can execute programs in convenient and efficient manner.
+
+What does an Operating system do?
+    - Process Management
+    - Process Synchronization
+    - Memory Management
+    - CPU Scheduling
+    - File Management
+    - Security
+
+____________________________________________________________
+Batch Operating System
+    - The Jobs were executed in batches. It has a single computer which was called mainframe.
+    - In Batch operating system, access is given to more than one person; they submit their respective jobs to the system for the execution.
+    - The system put all of the jobs in a queue on the basis of first come first serve and then executes the jobs one by one. The users collect their respective output when all the jobs get executed.
+
+Multiprogramming Operating System
+    - Multiprogramming is an extension to the batch processing where the CPU is kept always busy. Each process needs two types of system time: CPU time and IO time.
+    - In multiprogramming environment, for the time a process does its I/O, The CPU can start the execution of other processes. Therefore, multiprogramming improves the efficiency of the system.
+
+Multiprocessing Operating System
+    - In Multiprocessing, Parallel computing is achieved. There are more than one processors present in the system which can execute more than one process at the same time. This will increase the throughput of the system.
+
+Real Time Operating System
+    - In Real Time systems, each job carries a certain deadline within which the Job is supposed to be completed, otherwise the huge loss will be there or even if the result is produced then it will be completely useless.
+
+____________________________________________________________
+A Program does nothing unless its instructions are executed by a CPU. A program in execution is called a process. In order to accomplish its task, process needs the computer resources.
+
+The operating system is responsible for the following activities in connection with Process Management
+    - Scheduling processes and threads on the CPUs.
+    - Creating and deleting both user and system processes.
+    - Suspending and resuming processes.
+    - Providing mechanisms for process synchronization.
+    - Providing mechanisms for process communication.
+
+The Attributes of the process are used by the Operating System to create the process control block (PCB) for each of them. This is also called context of the process.
+
+____________________________________________________________
+Long term scheduler
+    - Long term scheduler is also known as job scheduler. It chooses the processes from the secondary memory/pool and puts them in the ready queue maintained in the primary memory.
+    - Long Term scheduler mainly controls the degree of Multiprogramming. The purpose of long term scheduler is to choose a perfect mix of IO bound and CPU bound processes among the jobs present in the pool.
+
+Short term scheduler
+    - Short term scheduler is also known as CPU scheduler. It selects one of the Jobs from the ready queue and dispatch to the CPU for the execution.
+    - A scheduling algorithm is used to select which job is going to be dispatched for the execution.
+
+Medium term scheduler
+    - Medium term scheduler takes care of the swapped out processes.If the running state processes needs some IO time for the completion then there is a need to change its state from running to waiting.
+
+Job Queue
+    In starting, all the processes get stored in the job queue. It is maintained in the secondary memory. The long term scheduler (Job scheduler) picks some of the jobs and put them in the primary memory.
+
+Ready Queue
+    Ready queue is maintained in primary memory. The short term scheduler picks the job from the ready queue and dispatch to the CPU for the execution.
+
+Waiting Queue
+    When the process needs some IO operation in order to complete its execution, OS changes the state of the process from running to waiting. The context (PCB) associated with the process gets stored on the waiting queue which will be used by the Processor when the process finishes the IO.
+
+____________________________________________________________
+First Come First Serve
+    It is the simplest algorithm to implement. The process with the minimal arrival time will get the CPU first. The lesser the arrival time, the sooner will the process gets the CPU. It is the non-preemptive type of scheduling.
+
+Round Robin
+    In the Round Robin scheduling algorithm, the OS defines a time quantum (slice). All the processes will get executed in the cyclic way. Each of the process will get the CPU for a small amount of time (called time quantum) and then get back to the ready queue to wait for its next turn. It is a preemptive type of scheduling.
+
+Shortest Job First
+    The job with the shortest burst time will get the CPU first. The lesser the burst time, the sooner will the process get the CPU. It is the non-preemptive type of scheduling.
+
+Shortest remaining time first
+    It is the preemptive form of SJF. In this algorithm, the OS schedules the Job according to the remaining time of the execution.
+
+Priority based scheduling
+    In this algorithm, the priority will be assigned to each of the processes. The higher the priority, the sooner will the process get the CPU. If the priority of the two processes is same then they will be scheduled according to their arrival time.
+
+Highest Response Ratio Next
+    In this scheduling Algorithm, the process with highest response ratio will be scheduled next. This reduces the starvation in the system.
+
+____________________________________________________________
+Convoy Effect in FCFS
+    FCFS may suffer from the convoy effect if the burst time of the first job is the highest among all. As in the real life, if a convoy is passing through the road then the other persons may get blocked until it passes completely. This can be simulated in the Operating System also.
+
+____________________________________________________________
+Synchronization
+    - When two or more process cooperates with each other, their order of execution must be preserved otherwise there can be conflicts in their execution and inappropriate outputs can be produced.
+    - The procedure involved in preserving the appropriate order of execution of cooperative processes is known as Process Synchronization.
+
+Context Switching
+    - Context Switching involves storing the context or state of a process so that it can be reloaded when required and execution can be resumed from the same point as earlier.
+
+Starvation
+    Starvation is a situation where the low priority process got blocked and the high priority processes proceed.
+
+____________________________________________________________
+Deadlock
+    A Deadlock is a situation where each of the computer process waits for a resource which is being assigned to some another process. In this situation, none of the process gets executed since the resource it needs, is held by some other process which is also waiting for some other resource to be released.
+
+conditions for Deadlocks
+    - Mutual Exclusion - A resource can only be shared in mutually exclusive manner. It implies, if two process cannot use the same resource at the same time.
+    - Hold and Wait - A process waits for some resources while holding another resource at the same time.
+    - No preemption - The process which once scheduled will be executed till the completion. No other process can be scheduled by the scheduler meanwhile.
+    - Circular Wait - All the processes must be waiting for the resources in a cyclic manner so that the last process is waiting for the resource which is being held by the first process.
+
+Strategies for handling Deadlock
+    Deadlock Ignorance
+    Deadlock prevention
+    Deadlock avoidance
+    Deadlock detection and recovery
+
+Deadlock Ignorance
+    - In this approach, the Operating system assumes that deadlock never occurs.
+    - In these types of systems, the user has to simply restart the computer in the case of deadlock.
+
+Deadlock prevention
+    - Deadlock happens only when Mutual Exclusion, hold and wait, No preemption and circular wait holds simultaneously. If it is possible to violate one of the four conditions at any time then the deadlock can never occur in the system.
+
+Deadlock avoidance
+    - In deadlock avoidance, the operating system checks whether the system is in safe state or in unsafe state at every step which the operating system performs. The process continues until the system is in safe state. Once the system moves to unsafe state, the OS has to backtrack one step.
+    - The OS reviews each allocation so that the allocation doesn't cause the deadlock in the system.
+
+Deadlock detection and recovery
+    - This approach let the processes fall in deadlock and then periodically check whether deadlock occur in the system or not. If it occurs then it applies some of the recovery methods to the system to get rid of deadlock.
+
+____________________________________________________________
+
+
+
